@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> Ambre Daibissaram </title>
+      <link href="../css/reset.css" rel="stylesheet" type="text/css" >
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <!-------------------- carousel ---------------------->
+      <link rel="stylesheet" href="../css/carousel.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link href="../css/motiondesign.css" rel="stylesheet" type="text/css" >
+   </head>
+
+   <body>
+
+       <!-------------------------- festival des murs à pêches ------------------------>
+
+        <section id="festivalDesMursAPeches">
+         <div class="container1">
+            
+            <!-------------------- carousel ---------------------->
+            
+            <div id="myCarousel1" class="carousel slide" data-interval="false">
+               
+               <!-------------------- menu burger ---------------------->
+              
+               <nav id="menu">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+               </nav>
+               <div id="itemMenu">
+                  <ul>
+                     <li><a href="../index.html">ACCUEIL<br></a></li>
+                     <li><a href="../index.html#projets">PROJETS<br></a></li>
+                     <li><a href="../index.html#contact">CONTACT</a></li>
+                  </ul>
+               </div>
+               <script>
+                  var mainMenu = document.querySelector("#itemMenu");
+                  var burgerMenu = document.querySelector("#menu");
+                  var clickedEvent = "click";
+                  
+                  // Crée un "toggle class" en Javascrit natif (compatible partout)
+                  burgerMenu.addEventListener(clickedEvent, function(evt) {
+                     console.log(clickedEvent);
+                     // Modification du menu burger
+                     this.classList.toggle("change");
+                  
+                     // Crée l'effet pour le menu slide (compatible partout)
+                     if(mainMenu.getAttribute("class") != "visible") {
+                        mainMenu.setAttribute("class", "visible");
+                     } else {
+                        mainMenu.setAttribute("class", "invisible");
+                     }
+                  }, false);
+                  
+                  // Menu se "range" après un clic n'importe où
+                  mainMenu.addEventListener(clickedEvent, function(evt) {
+                     console.log(clickedEvent);
+                     // Modification du menu burger
+                     burgerMenu.classList.toggle("change");
+                     mainMenu.setAttribute("class", "invisible");
+                  }, false);
+                  
+               </script>
+               <!-------------------- menu burger fin---------------------->
+              
+               <!-- Wrapper for slides -->
+               <div class="carousel-inner">
+                 
+                  <!-------------------- page 1 ---------------------->
+                 
+                  <div class="item active festivalDesMursAPeches1">
+                     <h1><a href="../index.html">Ambre Daibissaram</a></h1>
+                    
+                     <!-------------------- oulipo texte ---------------------->
+                     <div id="filtre"></div>
+                     <div id="videoFestivalDesMursAPeches">
+                       <img src="../images/motion design/festival.jpg" alt ="Image du festival des murs à pêches" width="60">
+                        <h3>ival<b><br>à pêches</b></h3>
+                     </div>
+                     <div id="texteFestivalDesMursAPeches">
+                        <p id="un">MOTION DESIGN</p>
+                        <h2>fest<br><b>des murs</b></h2>
+                        <p id="description">Teaser de 30s pour la 20e édition du festival.</p>
+                        <br>
+                        <h4> 2020</h4>
+                        <div id="festivalDesMursAPechesSwipe" class="demo">
+                           <a href="#formesElementaires"><span></span><span></span><span></span></a>
+                        </div>
+                     </div>
+                  </div>
+
+              
+               <!-- Left and right controls -->
+               
+               <a class="left-carousel-control" href="#myCarousel1" data-slide="prev">
+               <img src="../images/affiches/left.png" id="leftArrows" alt="flèche gauche"></a>
+               <a class="right-carousel-control" href="#myCarousel1" data-slide="next">
+               <img src="../images/affiches/right.png" id="rightArrows" alt="flèche droite"></a>
+            </div>
+         </div>
+      </div>
+      </section>
+
+   </body>

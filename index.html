@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> Ambre Daibissaram </title>
+      <link href="css/reset.css" rel="stylesheet" type="text/css" >
+      <link href="css/style.css" rel="stylesheet" type="text/css" >
+      <!--<link rel="stylesheet" href="https://use.typekit.net/buh0liv.css">-->
+   </head>
+   <body>
+      <section id="accueil">
+      	<header>
+      		<br>
+      		<h1><a href="index.html">Ambre Daibissaram</a></h1>
+      		<!-- menu burger (icône) -->
+      		<nav id="menu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+         </nav>
+      	</header>
+        
+         <!-- menu burger -->
+         
+         <div id="itemMenu">
+            <ul>
+               <li><a href="#accueil">ACCUEIL<br></a></li>
+               <li><a href="#projets">PROJETS<br></a></li>
+               <li><a href="#contact">CONTACT</a></li>
+            </ul>
+         </div>
+         <script>
+            var mainMenu = document.querySelector("#itemMenu");
+            var burgerMenu = document.querySelector("#menu");
+            var clickedEvent = "click";
+            
+            // Crée un "toggle class" en Javascrit natif (compatible partout)
+            burgerMenu.addEventListener(clickedEvent, function(evt) {
+            	console.log(clickedEvent);
+            	// Modification du menu burger
+            	this.classList.toggle("change");
+            
+            	// Crée l'effet pour le menu slide (compatible partout)
+            	if(mainMenu.getAttribute("class") != "visible") {
+            		mainMenu.setAttribute("class", "visible");
+            	} else {
+            		mainMenu.setAttribute("class", "invisible");
+            	}
+            }, false);
+            
+            // Menu se "range" après un clic n'importe où
+            mainMenu.addEventListener(clickedEvent, function(evt) {
+            	console.log(clickedEvent);
+            	// Modification du menu burger
+            	burgerMenu.classList.toggle("change");
+            	mainMenu.setAttribute("class", "invisible");
+            }, false);
+            
+         </script>
+         <h2 >AMBRE </h2>
+         <h3>DAIBISSARAM</h3>
+         
+         <!--barres -->
+
+         <div class="containerbar">
+            <div class= "barre1"></div>
+            <div class= "barre2"> </div>
+         </div>
+         <h4>étudiante en graphisme</h4>
+         <h5> portfolio</h5>
+        
+         <!--scroll down -->
+         <footer id="accueilSwipe" class="demo">
+            <a href="#projets"><span></span><span></span><span></span></a>
+         </footer>
+      </section>
+     
+      <!--projets -->
+
+      <section id="projets">
+      	<header>
+      		<br>
+      		<h1><a href="index.html">Ambre Daibissaram</a></h1>
+      	</header>
+      	<div id="menuRetreci">
+      		<h5><a href="index.html">ACCUEIL</a></h5>
+            <h5><a href="index.html#projets">PROJETS</a></h5>
+            <h5><a href="index.html#contact">CONTACT</a></h5>
+        </div>
+        <div id="menuCentral">
+            <h2><a href="html/affiches.html">affiches<sup>03</sup></a></h2>
+            <h2><a href="html/illustrations.html">illustration<sup>01</sup></a></h2>
+            <h2><a href="html/motiondesign.html">motion design<sup>05</sup></a></h2>
+            <h2><a href="html/edition.html"> édition<sup>01</sup></a></h2>
+        </div>
+         
+         <!--scroll down -->
+
+        <footer id="projetsSwipe" class="demo">
+            <a href="#contact"><span></span><span></span><span></span></a>
+        </footer>
+      </section>
+     
+      <!--contact-->
+
+      <section id="contact">
+      	<header>
+      		<br>
+      		<h1><a href="index.html">Ambre Daibissaram</a></h1>
+      	</header>
+         <br>
+         <h2>Ce portfolio met en lumière des projets fictifs et des travaux personnels. Merci de votre visite.</h2>
+         <br>
+         
+         <!--Icones de contact-->
+        
+         <img src="images/accueil/phonewhite.png" title= "+0760 425038" alt ="Icone de téléphone" width="60" id="telephone">
+         <a href="mailto:daibissaram.ambre@gmail.com">
+         <img src="images/accueil/mailwhite.png" alt ="Icone mail" width="60" id="mail" ></a>
+         <a href="https://www.instagram.com/adart.s/" target="_blank">
+         <img src="images/accueil/instai.png" alt ="Icone instagram" width="60" id="insta" ></a>
+         <a href="https://www.behance.net/ambredaibissaram" target="_blank">
+         <img src="images/accueil/behance-vector-png-behance-800.png" alt="Page behance" width="60" id="behance">
+         </a>
+
+         <p id="p1contact">Je suis actuellement en deuxième année DNMADe. Je me suis spécialisée en images narratives fixes et en mouvement. Cela me permet de questionner la création d’univers graphiques et chromatiques, et la notion d’image en elle même ; ceci à travers l’illustration, la typographie, l’animation, le motion design ou encore la composition. </p>
+         <p id="formationsTextef1"><b>Autoformation à TUMO PARIS</b> <sup>(en cours)</sup> <br>
+            école de création numérique ( Lab et masterclass en  illustration, graphisme, animation)<br>
+            Forum des images, Chatelêt<br><br>
+            <b>Dn made graphisme</b> <sup>(en cours)</sup> <br>
+            Diplome National des Metiers d’Arts et du Design - <br> Images narratives -  niveau bac +3 <br> 
+            Lycée eugenie cotton, Montreuil<br><br>
+            <b>Diplôme b1- anglais</b> <sup>(2017-2018)</sup> <br>
+            Lycée Rivière des Pères, Basse-Terre<br><br>
+            <b>Baccalauréat STD2A mention tb</b> <sup>(2015-2018)</sup> <br>
+            Lycée Rivière des Pères, Basse-Terre<br><br>
+         </p>
+         <p id="cvBackground">CV</p>
+         <p id="formationsTitre">formations</p>
+      </section>
+     
+      <!--contact suite-->
+
+      <section id="contactSuite">
+         <p id="experiencesTitre">expériences</p>
+         <p id="experiencesTexte"><b>Assistante d’édition numérique à l’entreprise <br> TV guadeloupe 1ere <sup>(Stage /1 mois/mai.2019)</sup> :</b> gestion des tâches quotidiennes, community management, realisation d’habillages numeriques pour le tour de Marie-Galante, refonte de l’identité visuelle de la page d’émission radio (bannières, habillages, illustrations). <br><br>
+            <b>Réalisation d’illustrations pour le livre jeunesse Ti régis écrit par l’autrice Bart Gladys <sup>(Freelance /2 mois/juil.2018)</sup> :</b> réalisation de l’ensemble des illustrations au format numérique, mise en couleur. <br><br>
+            <b>Entreprise TV guadeloupe 1ere <sup>(Stage /2 semaines/dec.2015)</sup> : </b> gestion des <br> tâches quotidiennes, report de la charte graphique sur les différentes images et reportages produits par le studio.<br><br>
+         <p id="competencesTitre">compétences</p>
+         <p id="competencesTexte">Illustration numérique <b>I</b> Illustration traditionelle <b>I</b> Adobe Photoshop <b>I</b> Adobe Illustrator <b>I</b> Adobe InDesign <b>I</b> After Effects  <b>I</b> Sublim Text - HTML5 & CSS3 </p>
+         
+         <!--scroll to top -->
+         
+         <footer id="contactSwipe" class="demo">
+            <a href="#accueil"><span></span></a>
+         </footer>
+      </section>
+   </body>
+</html>

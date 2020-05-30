@@ -1,0 +1,764 @@
+/* ---------------style de base ---------------------*/
+
+
+/* Futura PT Book*/
+@font-face {
+	font-family: "Futura PT";
+	font-style: normal;
+	src: url('../Futura/FuturaPTBook.otf');/*Book*/
+}
+/* Futura PT Bold*/
+@font-face {
+	font-family: "Futura PT";
+	font-weight: 700;
+	src: url('../Futura/FuturaPTBold.otf');
+}
+/* Futura PT Demi*/
+@font-face {
+	font-family: "Futura PT";
+	font-weight: 600;
+	src: url('../Futura/FuturaPTDemi.otf');
+}
+/* Futura PT Extra Bold*/
+@font-face {
+	font-family: "Futura PT";
+	font-weight: 800;
+	src: url('../Futura/FuturaPTExtraBold.otf');
+}
+/* Futura PT Light*/
+@font-face {
+	font-family: "Futura PT";
+	font-weight: 300;
+	src: url('../Futura/FuturaPTLight.otf');
+}
+/* Futura PT Medium*/
+@font-face {
+	font-family: "Futura PT";
+	font-weight: 500;
+	src: url('../Futura/FuturaPTMedium.otf');
+}
+ 
+ /* --------------- . ---------------------*/
+
+html {
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+}
+
+body {
+	background-color: #000c1c;
+	font-family: "Futura PT", "Futura", "Futura Bold";
+	src: url("https://use.typekit.net/buh0liv.css");
+	font-style: normal;
+	color: white;
+}
+
+section {
+	height: 100vmin;
+}
+
+#oulipo, #lettersAre, #chindogu{
+	scroll-snap-align: start;
+}
+
+/* --------------------------------projet oulipo ----------------------------------------*/
+
+#oulipo {
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: contain;
+}
+
+.oulipo2 {
+	overflow: hidden;
+	height: 100vmin;
+}
+
+
+/* --------------- menu burger ---------------------*/
+
+#menu{
+	display: inline-block;
+	cursor: pointer;
+	position: fixed;
+	right: 3vw;
+	margin-top: 2vh;
+	z-index: 5;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 5.5vw;
+	height: 0.25vw;
+	background-color: white;
+	margin: 0.5vw 0;
+	transition: 0.4s;
+	border-radius: 20vw;
+	opacity: 90%;
+}
+
+.change .bar1 {
+	transform: rotate(-45deg) translate(-0.6vw, 0.4vw);
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	transform: rotate(45deg) translate(-0.5vw, -0.5vw);
+}
+
+
+/* --------------- slide effect ---------------------*/
+
+#itemMenu {
+	font-size: 5vw;
+	text-align: center;
+	margin-top: 0vh;
+	position: fixed;
+	z-index: 2;
+	right: -100%;
+	background: linear-gradient(0.25turn, #000c1c, #000c1c, #e94a45);
+	width: 100%;
+	height: 102.5vmin;
+}
+
+
+#itemMenu ul li{
+	list-style: none;
+	margin-top: 25vh;
+}
+
+#itemMenu ul li a{
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 400;
+	transition: background .5s;
+	text-align: center;
+	line-height: 0vw;
+}
+
+#itemMenu ul li a:hover{
+	color: #e94a45;
+	transition: background .5s;
+}
+
+
+/* slide */
+
+#itemMenu.visible{
+	animation: .5s slideLeft ease-in forwards;
+	transition-delay: 0;
+}
+
+#itemMenu.invisible{
+	animation: .2s slideRight ease-out forwards;
+	transition-delay: 0;
+}
+
+
+/* --------------- animation slide effect ---------------------*/
+
+@keyframes slideLeft {
+	from {
+		right: -100%;
+	}
+	to {
+		right: 0%;
+	}
+}
+
+@keyframes slideRight {
+	from {
+		right: 0%;
+	}
+	to {
+		right: -100%;
+	}
+}
+
+
+/* --------------- scroll down  ---------------------*/
+
+#oulipoSwipe a span {
+	position: absolute;
+	bottom: -16vh;
+	right: 62%;
+	width: 1.8vw;
+	height: 1.8vw;
+	border-left: 0.08vw solid #e94a45;
+	border-bottom: 0.08vw solid #e94a45;
+	transform: rotate(-45deg);
+	animation: oulipoSwipe 1.5s infinite;
+	opacity: 50%;
+	box-sizing: border-box;
+}
+
+#oulipoSwipe a span:nth-of-type(1) {
+	animation-delay: 0s;
+}
+
+#oulipoSwipe a span:nth-of-type(2) {
+	bottom: -15vh;
+	animation-delay: .15s;
+}
+
+#oulipoSwipe a span:nth-of-type(3) {
+	bottom: -14vh;
+	animation-delay: .3s;
+}
+
+@keyframes oulipoSwipe {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+
+/* --------------- carousel ---------------------*/
+
+.container1 {
+	width: 100%;
+	margin-left: 0vw;
+}
+
+.carousel-indicators {
+	z-index: 1;
+}
+
+#myCarousel1 {
+	height: 100vmin;
+	position: static;
+	height: 100vmin;
+	margin-top: 0vh;
+	z-index: 0;
+}
+
+
+/* --------------- flèches  ---------------------*/
+
+#leftArrows {
+	margin-top: -50vh;
+	width: 3vw;
+	opacity: 50%;
+	float: left;
+	z-index: 90;
+}
+
+#rightArrows {
+	margin-top: -50vh;
+	width: 3vw;
+	float: right;
+	opacity: 50%;
+	z-index: 90;
+}
+
+
+/* --------------- oulipo img ---------------------*/
+
+#filtre {
+	background-color: #000c1c;
+	height: 101vmin;
+	width: 100vmin;
+	z-index: 1;
+	float: right;
+	margin-top: -3.5vw;
+	opacity: 80%;
+	transition-duration: 1s;
+	position: sticky;
+}
+
+#filtre:hover{
+	opacity: 0%;
+	transition-duration: 1S;
+}
+
+#afficheOulipo img {
+	height: 100vmin;
+	width: 100vmin;
+	z-index: -10;
+	float: right;
+	margin-top: -100.5vh;
+	position: relative;
+}
+
+
+/* --------------- page 1 ---------------------*/
+
+h1 {
+	font-size: 1.4vw;
+	font-weight: 300;
+	margin-left: 3vw;
+	margin-top: 2vh;
+	cursor: pointer;
+	z-index: 2;
+}
+
+a:link {
+	color: white;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #D1E0E8;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #e94a45;
+}
+
+#oulipo h2 {
+	position: absolute;
+	font-size: 15vw;
+	margin-left: 15.5vw;
+	margin-top: -10vh;
+	font-weight: 600;
+	text-shadow: white 2px 2px, white -2px 2px, white -2px -2px, white 2px -2px;
+	color: #000c1c;
+	cursor: default;
+}
+
+#texteOulipo {
+	z-index: 2;
+	color: #e94a45;
+}
+
+#un {
+	margin-top: 36.5vh;
+	margin-left: 15.9vw;
+	font-size: 1.3vw;
+	font-weight: 300;
+	cursor: default;
+}
+
+#description {
+	position: absolute;
+	margin-left: 15.9vw;
+	font-size: 1.3vw;
+	font-weight: 300;
+	margin-top: 18vh;
+	cursor: default;
+}
+
+#texteOulipo h4 {
+	margin-left: 15.9vw;
+	font-weight: 100;
+	margin-top:14vw;
+	cursor: default;
+}
+
+#afficheOulipo h3 {
+	font-size: 15vw;
+	z-index: 5;
+	float: right;
+	margin-top: -65vh;
+	margin-right: 38.5vw;
+	font-weight: 600;
+	color: white;
+}
+
+#afficheOulipo h3 :hover {
+	color: #000c1c;
+}
+
+
+/* --------------- page 2 ---------------------*/
+
+#videoOulipo {
+	float: left;
+	z-index: -5;
+	margin-top: -6vh;
+	margin-left: -10vw;
+	object-fit: fill;
+}
+
+
+/* --------------------------------letters are ----------------------------------------*/
+
+#lettersAre {
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: contain;
+	overflow: hidden;
+	height: 100vmin;
+}
+
+
+/* --------------- carousel 2 ---------------------*/
+
+.container2 {
+	width: 100%;
+	margin-left: 0vw;
+}
+
+#myCarousel2 {
+	height: 100vmin;
+	position: static;
+	height: 100vmin;
+	margin-top: 0vh;
+	z-index: 0;
+}
+
+
+/* --------------- flèches  ---------------------*/
+
+#leftArrows2 {
+	margin-top: -50vh;
+	width: 3vw;
+	opacity: 50%;
+	float: left;
+	z-index: 90;
+}
+
+#rightArrows2 {
+	margin-top: -50vh;
+	width: 3vw;
+	float: right;
+	opacity: 50%;
+	z-index: 90;
+}
+
+
+/* ---------------letters are img ---------------------*/
+
+#afficheLettersAre img {
+	height: 100vmin;
+	width: 100vmin;
+	z-index: -10;
+	float: right;
+	margin-top: -100.5vh;
+	position: sticky;
+}
+
+
+/* --------------- page 1 ---------------------*/
+
+#texteLettersAre h2 {
+	font-size: 15vw;
+	margin-left: 14vw;
+	margin-top: 2vh;
+	font-weight: 600;
+	text-shadow: white 2px 2px, white -2px 2px, white -2px -2px, white 2px -2px;
+	color: #000c1c;
+	cursor: default;
+	line-height: 10vw;
+}
+
+#texteLettersAre {
+	z-index: 2;
+	color: #e94a45;
+}
+
+#deux {
+	margin-top: 19vh;
+	margin-left: 14.8vw;
+	font-size: 1.3vw;
+	font-weight: 300;
+	cursor: default;
+}
+
+#descriptionDeux {
+	margin-left: 14.8vw;
+	font-size: 1.3vw;
+	font-weight: 300;
+	margin-top: 2vw;
+	cursor: default;
+}
+
+#texteLettersAre h4 {
+	margin-left: 14.8vw;
+	font-weight: 100;
+	margin-top: 0.5vw;
+	cursor: default;
+}
+
+#afficheLettersAre h3 {
+	font-size: 15vw;
+	z-index: 5;
+	float: right;
+	margin-top: -60vh;
+	margin-right: 33vw;
+	font-weight: 600;
+	color: white;
+}
+
+#afficheLettersAre h3 :hover {
+	color: #000c1c;
+}
+
+
+/* --------------- scroll down  ---------------------*/
+
+#lettersAreSwipe a span {
+	position: absolute;
+	bottom: -16vh;
+	right: 62%;
+	width: 1.8vw;
+	height: 1.8vw;
+	border-left: 0.08vw solid #e94a45;
+	border-bottom: 0.08vw solid #e94a45;
+	transform: rotate(-45deg);
+	animation: oulipoSwipe 1.5s infinite;
+	opacity: 50%;
+	box-sizing: border-box;
+}
+
+#lettersAreSwipe a span:nth-of-type(1) {
+	animation-delay: 0s;
+}
+
+#lettersAreSwipe a span:nth-of-type(2) {
+	bottom: -15vh;
+	animation-delay: .15s;
+}
+
+#lettersAreSwipe a span:nth-of-type(3) {
+	bottom: -14vh;
+	animation-delay: .3s;
+}
+
+@keyframes oulipoSwipe {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+
+/* --------------- page 2 ---------------------*/
+
+
+/* --------------- img ---------------------*/
+
+img#lettersare1{
+	z-index: -3;
+	position: sticky;
+	} 
+
+
+/* --------------- page 3 ---------------------*/
+
+
+/* --------------- img ---------------------*/
+
+.lettersAre3 video{
+	z-index: 1;
+	margin-top: -75vh;
+	margin-left: 40%;
+	position: fixed;
+	float: center;
+	} 
+
+img#lettersare2{
+	z-index: -3;
+	position: sticky;
+	margin-top: -87vh;
+	} 
+
+h5{
+	margin-right: 4vw;
+	font-size: 1.8vw;
+	z-index: 2;
+	text-align: right;
+	color: #e94a45;
+	font-weight: 100;
+	justify-content: right;
+	margin-top: 80vh;	
+}
+
+
+/* -------------------------------- projet chindogu ----------------------------------------*/
+
+#chindogu{
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: contain;
+}
+
+#chindogu h1 {
+	font-size: 1.4vw;
+	font-weight: 300;
+	margin-left: 3vw;
+	margin-top: 2vh;
+	cursor: pointer;
+	z-index: 2;
+}
+
+a:link {
+	color: white;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #D1E0E8;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #e94a45;
+}
+
+/* --------------- animation slide effect ---------------------*/
+
+@keyframes slideLeft {
+	from {
+		right: -100%;
+	}
+	to {
+		right: 0%;
+	}
+}
+
+@keyframes slideRight {
+	from {
+		right: 0%;
+	}
+	to {
+		right: -100%;
+	}
+}
+
+/* --------------- carousel 2 ---------------------*/
+
+.container3 {
+	width: 100%;
+	margin-left: 0vw;
+}
+
+#myCarousel3 {
+	height: 100vmin;
+	position: static;
+	height: 100vmin;
+	margin-top: 0vh;
+	z-index: 0;
+}
+
+/* --------------- flèches  ---------------------*/
+
+#leftArrows3 {
+	margin-top: -50vh;
+	width: 3vw;
+	opacity: 50%;
+	float: left;
+	z-index: 90;
+}
+
+#rightArrows3 {
+	margin-top: -50vh;
+	width: 3vw;
+	float: right;
+	opacity: 50%;
+	z-index: 90;
+}
+
+/* ---------------chindogu img ---------------------*/
+
+#afficheChindogu img {
+	height: 100vmin;
+	width: 100vmin;
+	z-index: -10;
+	float: right;
+	margin-top: -100.5vh;
+	position: sticky;
+}
+/* --------------- page 1 ---------------------*/
+
+#texteChindogu h2 {
+	font-size: 15vw;
+	margin-left: 13vw;
+	margin-top: -2vh;
+	font-weight: 600;
+	text-shadow: white 2px 2px, white -2px 2px, white -2px -2px, white 2px -2px;
+	color: #000c1c;
+	cursor: default;
+	line-height: 10vw;
+}
+
+#texteChindogu {
+	z-index: 2;
+	color: #e94a45;
+}
+
+#trois {
+	margin-top: 39vh;
+	margin-left: 12.8vw;
+	font-size: 1.3vw;
+	font-weight: 300;
+	cursor: default;
+}
+
+#descriptionTrois {
+	margin-left: 12.8vw;
+	font-size: 1.3vw;
+	font-weight: 300;
+	margin-top: 2vw;
+	cursor: default;
+	width: 28vw;
+}
+
+#texteChindogu h4 {
+	margin-left: 12.8vw;
+	font-weight: 100;
+	margin-top: -2vh;
+	cursor: default;
+}
+
+#afficheChindogu h3 {
+	font-size: 15vw;
+	z-index: 5;
+	float: right;
+	margin-top: -60vh;
+	margin-right: 22vw;
+	font-weight: 600;
+	color: white;
+}
+
+#descriptionTrois b{
+	font-weight: 100;
+}
+
+
+/* --------------- page 2 ---------------------*/
+
+.chindogu2 {
+	overflow: hidden;
+	height: 100vmin;
+}
+
+img#chindogu2{
+	z-index: -5;
+	margin-top:-8vh;
+	position: sticky;
+	} 
+
+
+/* --------------- page 3 ---------------------*/
+
+.chindogu3 {
+	overflow: hidden;
+	height: 100vmin;
+}
+
+img#chindogu3{
+	z-index: -5;
+	margin-top:-8vh;
+	position: sticky;
+	} 
+
+
+

@@ -1,0 +1,449 @@
+/* ---------------style de base ---------------------*/
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #000c1c;
+	font-family: "Futura PT", "Futura", "Futura Bold";
+	src: url("https://use.typekit.net/buh0liv.css");
+	font-style: normal;
+	color: white;
+}
+
+section {
+	height: 100vmin;
+}
+
+/* -------------------------------- nightline ----------------------------------------*/
+
+#nightline {
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: contain;
+	overflow: hidden;
+	height: 100vmin;
+}
+
+
+
+/* --------------- menu burger ---------------------*/
+
+#menu{
+	display: inline-block;
+	cursor: pointer;
+	position: absolute;
+	right: 3vw;
+	margin-top: 2vh;
+	z-index: 5;
+}
+
+.bar1,.bar2,.bar3 {
+	width: 5.5vw;
+	height: 0.25vw;
+	background-color: white;
+	margin: 0.5vw 0;
+	transition: 0.4s;
+	border-radius: 20vw;
+	opacity: 90%;
+}
+
+.change .bar1 {
+	transform: rotate(-45deg) translate(-0.6vw, 0.4vw);
+}
+
+.change .bar2 {
+	opacity:0%;
+}
+
+.change .bar3 {
+	transform: rotate(45deg) translate(-0.5vw, -0.5vw);
+}
+
+
+/* --------------- slide effect ---------------------*/
+
+#itemMenu {
+	font-size: 5vw;
+	text-align: center;
+	margin-top: 0vh;
+	position: fixed;
+	z-index: 2;
+	right: -100%;
+	background: linear-gradient(0.25turn, #000c1c, #000c1c, #e94a45);
+	width: 100%;
+	height: 102.5vmin;
+}
+
+#itemMenu2 {
+	font-size: 5vw;
+	text-align: center;
+	margin-top: 0vh;
+	position: fixed;
+	z-index: 2;
+	right: -100%;
+	background: linear-gradient(0.25turn, #000c1c, #000c1c, #e94a45);
+	width: 100%;
+	height: 102.5vmin;
+}
+
+#itemMenu ul li{
+	list-style: none;
+	margin-top: 25vh;
+}
+
+#itemMenu ul li a{
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 400;
+	transition: background .5s;
+	text-align: center;
+	line-height: 0vw;
+}
+
+#itemMenu ul li a:hover{
+	color: #e94a45;
+	transition: background .5s;
+}
+
+
+/* slide */
+
+#itemMenu.visible{
+	animation: .5s slideLeft ease-in forwards;
+	transition-delay: 0;
+}
+
+#itemMenu.invisible{
+	animation: .2s slideRight ease-out forwards;
+	transition-delay: 0;
+}
+
+
+/* --------------- animation slide effect ---------------------*/
+
+@keyframes slideLeft {
+	from {
+		right: -100%;
+	}
+	to {
+		right: 0%;
+	}
+}
+
+@keyframes slideRight {
+	from {
+		right: 0%;
+	}
+	to {
+		right: -100%;
+	}
+}
+
+
+/* --------------- carousel ---------------------*/
+
+.container1 {
+	width: 100%;
+	margin-left: 0vw;
+}
+
+.carousel-indicators {
+	z-index: 1;
+}
+
+#myCarousel1 {
+	height: 100vmin;
+	position: static;
+	height: 100vmin;
+	margin-top: 0vh;
+	z-index: 0;
+}
+
+
+/* --------------- flèches  ---------------------*/
+
+#leftArrows {
+	margin-top: -50vh;
+	width: 3vw;
+	opacity: 50%;
+	float: left;
+	z-index: 90;
+}
+
+#rightArrows {
+	margin-top: -50vh;
+	width: 3vw;
+	float: right;
+	opacity: 50%;
+	z-index: 90;
+}
+
+
+/* ---------------nightline img ---------------------*/
+
+#filtre {
+	background-color: #000c1c;
+	height: 101vmin;
+	width: 100vmin;
+	z-index: 1;
+	float: right;
+	margin-top: -3.5vw;
+	opacity: 80%;
+	transition-duration: 1s;
+	position: sticky;
+}
+
+#filtre:hover{
+	opacity: 0%;
+	transition-duration: 1S;
+}
+
+#illustrationNightline img {
+	height: 100vmin;
+	width: 100vmin;
+	z-index: -10;
+	float: right;
+	margin-top: -100.5vh;
+	position: sticky;
+}
+
+
+/* --------------- page 1 ---------------------*/
+
+h1 {
+	font-size: 1.4vw;
+	font-weight: 300;
+	margin-left: 3vw;
+	margin-top: 2vh;
+	cursor: pointer;
+	z-index: 2;
+}
+
+a:link {
+	color: white;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #D1E0E8;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #e94a45;
+}
+
+#nightline h2 {
+	font-size: 15vw;
+	margin-left: 5vw;
+	margin-top: 0vh;
+	font-weight: 600;
+	text-shadow: white 2px 2px, white -2px 2px, white -2px -2px, white 2px -2px;
+	color: #000c1c;
+	cursor: default;
+	line-height: 13vw;
+}
+
+#texteNightline {
+	z-index: 2;
+	color: #e94a45;
+}
+
+#un {
+	margin-top: 15vw;
+	margin-left: 14.8vw;
+	font-size: 1.3vw;
+	font-weight: 300;
+	cursor: default;
+}
+
+#description {
+	margin-left: 14.8vw;
+	font-size: 1.3vw;
+	font-weight: 300;
+	margin-top: 1vw;
+	cursor: default;
+	
+}
+
+#texteNightline h4 {
+	margin-left: 14.8vw;
+	font-weight: 100;
+	margin-top: -1vw;
+	cursor: default;
+	
+}
+
+#illustrationNightline h3 {
+	font-size: 15vw;
+	z-index: 5;
+	float: right;
+	margin-top: -40vw;
+	margin-right: 32vw;
+	font-weight: 600;
+	color: white;
+}
+/* --------------- page 2 ---------------------*/
+
+.nightline2 h3{
+	color: #e94a45;
+	font-size: 1.25vw;
+	font-weight: 300;
+	width: 30vw;
+	margin-left: auto;
+  	margin-right: auto;
+	margin-top: 10%;	
+}
+
+.nightline2 p{
+	display: block;
+	font-size: 1.8vw;
+	width: 30vw;
+	font-weight: 150;
+	text-align:justify;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+.nightline2 img{
+	float: right;
+	margin-top:-10vh;
+	margin-right: -8.5vw;
+}
+
+/* --------------- page 3 ---------------------*/
+
+.flex-container {
+  float:center;
+  display:flex;
+  flex-flow: row;
+  justify-content:space-around;
+  align-items: center;
+  height: 100vmin;
+  width: 80%;
+  margin-top: -6vh;
+  margin-right:auto;
+  margin-left: auto;
+ opacity: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color:#000c1c;
+}
+
+#logonightline2{
+	float: left;
+	margin-top:-30vh;
+	margin-left: -13vw;
+	z-index: 3;
+}
+
+.textYann{
+  color:white;
+  font-size: 1vw;
+  position: absolute;
+  font-weight: 300;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center justify;
+  cursor: pointer;
+}
+
+.textYann b{
+	font-weight: 700;
+}
+
+#containeryann{
+	position: relative;
+}
+#containeryann a{
+	z-index: 2;
+}
+#containeryann:hover .overlay {
+  opacity: 70%;
+}
+
+/* --------------- page 4 ---------------------*/
+
+.textSalome{
+  color:white;
+  font-size: 1vw;
+  position: absolute;
+  font-weight: 300;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center justify;
+  cursor: pointer;
+}
+
+.textSalome b{
+	font-weight: 700;
+}
+
+#containersalome{
+	position: relative;
+}
+#containersalome a{
+	z-index: 2;
+}
+#containersalome:hover .overlay {
+  opacity: 80%;
+}
+
+/* --------------- page 5 ---------------------*/
+
+.textTous{
+  color:white;
+  font-size: 1vw;
+  position: absolute;
+  font-weight: 300;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center justify;
+  cursor: pointer;
+}
+
+.textTous b{
+	font-weight: 700;
+}
+
+#containerTous{
+	position: relative;
+}
+#containerTous a{
+	z-index: 2;
+}
+#containerTous:hover .overlay {
+  opacity: 80%;
+}
+
+.overlay img{
+	margin-left: 8vw;
+	margin-top:2vw;
+}
+
+
+
+
+
