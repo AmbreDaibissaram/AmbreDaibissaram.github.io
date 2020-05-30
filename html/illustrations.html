@@ -6,27 +6,27 @@
       <title> Ambre Daibissaram </title>
       <link href="../css/reset.css" rel="stylesheet" type="text/css" >
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      
-      <!-------------------- carousel ---------------------->
+
+      <!-- carousel ---------------------->
       <link rel="stylesheet" href="../css/carousel.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       <link href="../css/illustrations.css" rel="stylesheet" type="text/css" >
    </head>
-   
+
    <body>
 
-       <!------------------------------- OULIPO------------------------------------>
-      
+       <!--- OULIPO------------------------------------>
+
       <section id="nightline">
          <div class="container1">
-            
-            <!-------------------- carousel ---------------------->
-            
+
+            <!-- carousel ---------------------->
+
             <div id="myCarousel1" class="carousel slide" data-interval="false">
-               
-               <!-------------------- menu burger ---------------------->
-              
+
+               <!-- menu burger ---------------------->
+
                <nav id="menu">
                   <div class="bar1"></div>
                   <div class="bar2"></div>
@@ -43,13 +43,13 @@
                   var mainMenu = document.querySelector("#itemMenu");
                   var burgerMenu = document.querySelector("#menu");
                   var clickedEvent = "click";
-                  
+
                   // Crée un "toggle class" en Javascrit natif (compatible partout)
                   burgerMenu.addEventListener(clickedEvent, function(evt) {
                      console.log(clickedEvent);
                      // Modification du menu burger
                      this.classList.toggle("change");
-                  
+
                      // Crée l'effet pour le menu slide (compatible partout)
                      if(mainMenu.getAttribute("class") != "visible") {
                         mainMenu.setAttribute("class", "visible");
@@ -57,7 +57,7 @@
                         mainMenu.setAttribute("class", "invisible");
                      }
                   }, false);
-                  
+
                   // Menu se "range" après un clic n'importe où
                   mainMenu.addEventListener(clickedEvent, function(evt) {
                      console.log(clickedEvent);
@@ -65,19 +65,19 @@
                      burgerMenu.classList.toggle("change");
                      mainMenu.setAttribute("class", "invisible");
                   }, false);
-                  
+
                </script>
-               <!-------------------- menu burger fin---------------------->
-              
+               <!--- menu burger fin---------------------->
+
                <!-- Wrapper for slides -->
                <div class="carousel-inner">
-                 
-                  <!-------------------- page 1 ---------------------->
-                 
+
+                  <!--- page 1 ---------------------->
+
                   <div class="item active nightline1">
                      <h1><a href="../index.html">Ambre Daibissaram</a></h1>
-                    
-                     <!-------------------- nightline texte ---------------------->
+
+                     <!--- nightline texte ---------------------->
                      <div id="filtre"></div>
                      <div id="illustrationNightline">
                         <img src="../images/illustrations/sdb.jpg" alt ="Affiche nightline" width="60">
@@ -91,9 +91,9 @@
                         <h4> 2020</h4>
                      </div>
                   </div>
-                 
-                  <!-------------------- page 2 ---------------------->
-                  
+
+                  <!--- page 2 ---------------------->
+
                   <div class="item nightline2">
                      <h1><a href="../index.html">Ambre Daibissaram</a></h1>
 
@@ -104,15 +104,15 @@
                      <img src="../images/illustrations/01.logo-nightline-copywhite.png" alt ="logo nightline" width="350">
                   </div>
 
-                   <!-------------------- page 3 ---------------------->
+                   <!--- page 3 ---------------------->
 
                   <div class="item nightline3">
 
                      <h1><a href="../index.html">Ambre Daibissaram</a></h1>
 
                       <div class="flex-container">
-                          
-                          <div id="containeryann"> 
+
+                          <div id="containeryann">
                            <img src="../images/illustrations/frame 1.jpg" alt ="illustrations nightline" width="400" >
                               <a href="https://www.instagram.com/p/B_kHLS7IAng/" target="_blank" class="overlay">
                               <div class="textYann"><b>@nightlineparis</b> Yanis déprime de ne pas pouvoir voir sa petite amie pendant le confinement, heureusement il sait qu’il ne reste plus que quelques jours avant de pouvoir enfin la prendre dans ses bras.</div>
@@ -134,18 +134,18 @@
                               </a>
                           </div>
                      </div>
-                         <img src="../images/illustrations/01.logo-nightline-copywhite.png" alt ="logo nightline" width="350" id="logonightline2"> 
+                         <img src="../images/illustrations/01.logo-nightline-copywhite.png" alt ="logo nightline" width="350" id="logonightline2">
                   </div>
 
-                  <!-------------------- page 4 ---------------------->
+                  <!--- page 4 ---------------------->
 
                     <div class="item nightline4">
 
                      <h1><a href="../index.html">Ambre Daibissaram</a></h1>
 
                       <div class="flex-container">
-                          
-                          <div id="containersalome"> 
+
+                          <div id="containersalome">
                            <img src="../images/illustrations/salome1.jpg" alt ="illustrations nightline" width="400" >
                               <a href="https://www.instagram.com/p/B-o3yBToV9O/" target="_blank" class="overlay">
                               <div class="textSalome"><b>@nightlineparis</b> Le Covid-19 peut toucher même les plus jeunes, faites comme nos colocataires, restez chez vous et prenez soin de vous.</div>
@@ -168,19 +168,19 @@
                               </a>
                           </div>
                      </div>
-                         <img src="../images/illustrations/01.logo-nightline-copywhite.png" alt ="logo nightline" width="350" id="logonightline2"> 
+                         <img src="../images/illustrations/01.logo-nightline-copywhite.png" alt ="logo nightline" width="350" id="logonightline2">
                   </div>
 
-               <!-------------------- page 5 ---------------------->
-                  
+               <!--- page 5 ---------------------->
+
 
                     <div class="item nightline5">
 
                      <h1><a href="../index.html">Ambre Daibissaram</a></h1>
 
                       <div class="flex-container">
-                          
-                          <div id="containerTous"> 
+
+                          <div id="containerTous">
                            <img src="../images/illustrations/tous.jpg" alt ="illustrations nightline" width="400" >
                               <a href="https://www.instagram.com/p/B-cCdssixYO/" target="_blank" class="overlay">
                               <div class="textTous"><b>@nightlineparis</b> Alors que pensez-vous de notre BD ? Si vous voulez participer à sa confection n’hésitez pas à nous envoyer vos anecdotes !</div>
@@ -203,13 +203,13 @@
                               </a>
                           </div>
                      </div>
-                         <img src="../images/illustrations/01.logo-nightline-copywhite.png" alt ="logo nightline" width="350" id="logonightline2"> 
+                         <img src="../images/illustrations/01.logo-nightline-copywhite.png" alt ="logo nightline" width="350" id="logonightline2">
                   </div>
 
              </div>
-              
+
                <!-- Left and right controls -->
-               
+
                <a class="left-carousel-control" href="#myCarousel1" data-slide="prev">
                <img src="../images/affiches/left.png" id="leftArrows" alt="flèche gauche"></a>
                <a class="right-carousel-control" href="#myCarousel1" data-slide="next">
@@ -217,7 +217,7 @@
             </div>
          </div>
       </section>
-     
+
 
 
    </body>

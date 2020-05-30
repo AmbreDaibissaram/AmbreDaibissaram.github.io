@@ -36,7 +36,7 @@
 	font-weight: 500;
 	src: url('../Futura/FuturaPTMedium.otf');
 }
- 
+
  /* --------------- . ---------------------*/
 
 
@@ -61,7 +61,7 @@ section {
 	scroll-snap-align: start;
 }
 
-/* --------------------------------projet oulipo ----------------------------------------*/
+/* --------------------------------projet festivalDesMursAPeches ----------------------------------------*/
 
 #festivalDesMursAPeches {
 	background-repeat: no-repeat;
@@ -183,7 +183,7 @@ section {
 
 #festivalDesMursAPechesSwipe a span {
 	position: absolute;
-	bottom: -26vh;
+	bottom: -16vh;
 	right: 62%;
 	width: 1.8vw;
 	height: 1.8vw;
@@ -200,12 +200,12 @@ section {
 }
 
 #festivalDesMursAPechesSwipe a span:nth-of-type(2) {
-	bottom: -25vh;
+	bottom: -15vh;
 	animation-delay: .15s;
 }
 
 #festivalDesMursAPechesSwipe a span:nth-of-type(3) {
-	bottom: -24vh;
+	bottom: -14vh;
 	animation-delay: .3s;
 }
 
@@ -249,7 +249,7 @@ section {
 	width: 3vw;
 	opacity: 50%;
 	float: left;
-	z-index: 90;
+	z-index: 4;
 }
 
 #rightArrows {
@@ -257,11 +257,11 @@ section {
 	width: 3vw;
 	float: right;
 	opacity: 50%;
-	z-index: 90;
+	z-index: 4;
 }
 
 
-/* --------------- oulipo img ---------------------*/
+/* --------------- festivalDesMursAPeches img ---------------------*/
 
 #filtre {
 	background-color: #000c1c;
@@ -273,6 +273,7 @@ section {
 	opacity: 80%;
 	transition-duration: 1s;
 	position: sticky;
+	cursor: pointer;
 }
 
 #filtre:hover{
@@ -384,4 +385,305 @@ a:hover {
 	color: white;
 }
 
+/* video */
+#video {
+	font-size: 5vw;
+	text-align: center;
+	margin-top: -6vh;
+	position: fixed;
+	z-index: 6;
+	right: -100%;
+	background: #000c1c;
+	opacity: 100%;
+	width: 100%;
+	height: 102.5vmin;
+}
 
+/* croix video */
+#croix{
+	position: absolute;
+	cursor: pointer;
+	right: 50%;
+	margin-top: 2vh;
+	z-index: 8;
+	height: 3vmin;
+	width: 3vmin;
+}
+
+/* video iframe */
+#video iframe{
+	object-fit: fill;
+	position: sticky;
+	float: center;
+	z-index: 6;
+	margin-top: -3vh;
+}
+
+/* slide */
+
+#video.visible{
+	animation: .3s slideLeft ease-in forwards;
+	transition-delay: 0;
+}
+
+#video.invisible{
+	animation: .2s slideRight ease-out forwards;
+	transition-delay: 0;
+}
+
+@keyframes slideLeft {
+	from {
+		right: -100%;
+	}
+	to {
+		right: 0%;
+	}
+}
+
+@keyframes slideRight {
+	from {
+		right: 0%;
+	}
+	to {
+		right: -100%;
+	}
+}
+
+/* --------------- page 2 ---------------------*/
+.festivalDesMursAPeches2 {
+	overflow: hidden;
+	height: 100vmin;
+}
+
+#imageFestivalDesMursAPeches img{
+	z-index: -5;
+	margin-top:-8vh;
+	position: sticky;
+	}
+
+/* --------------- page 3 ---------------------*/
+
+	#videofestivalDesMursAPeches {
+		float: center;
+		z-index: -5;
+		margin-top: -8vh;
+		margin-left: -8.8vw;
+		object-fit: fill;
+		cursor: pointer;
+	}
+
+
+	/* --------------------------------projet formesElementaires ----------------------------------------*/
+
+	#formesElementaires {
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: contain;
+		overflow: hidden;
+		height: 100vmin;
+	}
+
+
+	/* --------------- carousel 2 ---------------------*/
+
+	.container2 {
+		width: 100%;
+		margin-left: 0vw;
+	}
+
+	#myCarousel2 {
+		height: 100vmin;
+		position: static;
+		height: 100vmin;
+		margin-top: 0vh;
+		z-index: 0;
+	}
+
+
+	/* --------------- flèches  ---------------------*/
+
+	#leftArrows2 {
+		margin-top: -50vh;
+		width: 3vw;
+		opacity: 50%;
+		float: left;
+		z-index: 90;
+	}
+
+	#rightArrows2 {
+		margin-top: -50vh;
+		width: 3vw;
+		float: right;
+		opacity: 50%;
+		z-index: 90;
+	}
+
+
+	/* ---------------formesElementaires-----------------*/
+
+	#videoformesElementaires img {
+		height: 100vmin;
+		width: 100vmin;
+		z-index: -10;
+		float: right;
+		margin-top: -100.5vh;
+		position: sticky;
+	}
+
+
+	/* --------------- page 1 ---------------------*/
+
+	#texteformesElementaires h2 {
+		font-size: 14vw;
+		margin-top: -7vh;
+		font-weight: 600;
+		text-shadow: white 2px 2px, white -2px 2px, white -2px -2px, white 2px -2px;
+		color: #000c1c;
+		cursor: default;
+		line-height: 14vw;
+		text-align: right;
+	}
+
+	#texteformesElementaires {
+		z-index: 2;
+		color: #e94a45;
+	}
+
+	#deux {
+		margin-top: 25vh;
+		margin-left: 14.8vw;
+		font-size: 1.3vw;
+		font-weight: 300;
+		cursor: default;
+	}
+
+	#descriptionDeux {
+		margin-left: 14.8vw;
+		font-size: 1.3vw;
+		font-weight: 300;
+		margin-top: 2vw;
+		cursor: default;
+	}
+
+	#texteformesElementaires h4 {
+		margin-left: 14.8vw;
+		font-weight: 100;
+		margin-top: 0.5vw;
+		cursor: default;
+	}
+
+	#videoformesElementaires h3 {
+		font-size: 14vw;
+		z-index: 5;
+		float: right;
+		margin-top: -73vh;
+		margin-right: 5vw;
+		font-weight: 600;
+		color:#e94a45;
+		line-height: 14vw;
+	}
+
+	#videoformesElementaires h3 :hover {
+		color: #000c1c;
+	}
+
+
+	/* --------------- scroll down  ---------------------*/
+
+	#formesElementairesSwipe a span {
+		position: absolute;
+		bottom: -16vh;
+		right: 62%;
+		width: 1.8vw;
+		height: 1.8vw;
+		border-left: 0.08vw solid #e94a45;
+		border-bottom: 0.08vw solid #e94a45;
+		transform: rotate(-45deg);
+		animation: oulipoSwipe 1.5s infinite;
+		opacity: 50%;
+		box-sizing: border-box;
+	}
+
+	#formesElementairesSwipe a span:nth-of-type(1) {
+		animation-delay: 0s;
+	}
+
+	#formesElementairesSwipe a span:nth-of-type(2) {
+		bottom: -15vh;
+		animation-delay: .15s;
+	}
+
+	#formesElementairesSwipe a span:nth-of-type(3) {
+		bottom: -14vh;
+		animation-delay: .3s;
+	}
+
+	@keyframes oulipoSwipe {
+		0% {
+			opacity: 0;
+		}
+		50% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+
+	/* --------------- page 2 -------------------------------------------------*/
+
+
+
+	.flex-container {
+	  float:center;
+	  display:flex;
+	  flex-flow: row;
+	  justify-content:space-around;
+	  align-items: center;
+	  height: 70vmin;
+	  width: 80%;
+	  margin-top: 10vh;
+	  margin-right:auto;
+	  margin-left: auto;
+	 	opacity: 100%;
+		flex-wrap: wrap;
+	}
+
+	.overlay {
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  height: 100%;
+	  width: 100%;
+	  opacity: 0;
+	  transition: .5s ease;
+	  background-color:#000c1c;
+	}
+
+	.textformesElementaires{
+	  color:white;
+	  font-size: 1vw;
+	  position: absolute;
+	  font-weight: 300;
+	  top: 50%;
+	  left: 50%;
+	  -webkit-transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  transform: translate(-50%, -50%);
+	  text-align: center justify;
+	  cursor: pointer;
+	}
+
+	#containerformesElementaires{
+		position: relative;
+	}
+
+	#containerformesElementaires a{
+		z-index: 2;
+	}
+	#containerformesElementaires:hover .overlay {
+	  opacity: 70%;
+	}

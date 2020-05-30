@@ -37,7 +37,7 @@
 	font-weight: 500;
 	src: url('../Futura/FuturaPTMedium.otf');
 }
- 
+
  /* --------------- . ---------------------*/
 
 html {
@@ -378,7 +378,7 @@ a:hover {
 	float: left;
 	z-index: -5;
 	margin-top: -6vh;
-	margin-left: -10vw;
+	margin-left: -6vw;
 	object-fit: fill;
 }
 
@@ -548,7 +548,7 @@ a:hover {
 img#lettersare1{
 	z-index: -3;
 	position: sticky;
-	} 
+	}
 
 
 /* --------------- page 3 ---------------------*/
@@ -562,13 +562,13 @@ img#lettersare1{
 	margin-left: 40%;
 	position: fixed;
 	float: center;
-	} 
+	}
 
 img#lettersare2{
 	z-index: -3;
 	position: sticky;
 	margin-top: -87vh;
-	} 
+	}
 
 h5{
 	margin-right: 4vw;
@@ -578,7 +578,7 @@ h5{
 	color: #e94a45;
 	font-weight: 100;
 	justify-content: right;
-	margin-top: 80vh;	
+	margin-top: 80vh;
 }
 
 
@@ -744,7 +744,7 @@ img#chindogu2{
 	z-index: -5;
 	margin-top:-8vh;
 	position: sticky;
-	} 
+	}
 
 
 /* --------------- page 3 ---------------------*/
@@ -758,7 +758,4 @@ img#chindogu3{
 	z-index: -5;
 	margin-top:-8vh;
 	position: sticky;
-	} 
-
-
-
+	}
