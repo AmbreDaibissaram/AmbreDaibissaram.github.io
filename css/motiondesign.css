@@ -263,7 +263,7 @@ section {
 
 /* --------------- festivalDesMursAPeches img ---------------------*/
 
-#filtre {
+#filtre, #filtre2,#filtre3  {
 	background-color: #000c1c;
 	height: 101vmin;
 	width: 100vmin;
@@ -276,7 +276,7 @@ section {
 	cursor: pointer;
 }
 
-#filtre:hover{
+#filtre:hover, #filtre2:hover, #filtre3:hover{
 	opacity: 0%;
 	transition-duration: 1S;
 }
@@ -386,7 +386,7 @@ a:hover {
 }
 
 /* video */
-#video {
+#video, #video2, #video3,#video4{
 	font-size: 5vw;
 	text-align: center;
 	margin-top: -6vh;
@@ -400,33 +400,33 @@ a:hover {
 }
 
 /* croix video */
-#croix{
+#croix, #croix2, #croix3 {
 	position: absolute;
 	cursor: pointer;
 	right: 50%;
-	margin-top: 2vh;
+	margin-top: 6vh;
 	z-index: 8;
 	height: 3vmin;
 	width: 3vmin;
 }
 
 /* video iframe */
-#video iframe{
+#video iframe, #video2 iframe, #video3 iframe{
 	object-fit: fill;
 	position: sticky;
-	float: center;
+	float: right;
 	z-index: 6;
-	margin-top: -3vh;
+	margin-top: 2vh;
 }
 
 /* slide */
 
-#video.visible{
+#video.visible, #video2.visible, #video3.visible{
 	animation: .3s slideLeft ease-in forwards;
 	transition-delay: 0;
 }
 
-#video.invisible{
+#video.invisible, #video2.invisible, #video3.invisible,{
 	animation: .2s slideRight ease-out forwards;
 	transition-delay: 0;
 }
@@ -464,7 +464,6 @@ a:hover {
 /* --------------- page 3 ---------------------*/
 
 	#videofestivalDesMursAPeches {
-		float: center;
 		z-index: -5;
 		margin-top: -8vh;
 		margin-left: -8.8vw;
@@ -577,7 +576,7 @@ a:hover {
 		z-index: 5;
 		float: right;
 		margin-top: -73vh;
-		margin-right: 5vw;
+		margin-right: 4vw;
 		font-weight: 600;
 		color:#e94a45;
 		line-height: 14vw;
@@ -592,14 +591,14 @@ a:hover {
 
 	#formesElementairesSwipe a span {
 		position: absolute;
-		bottom: -16vh;
+		bottom: -5vh;
 		right: 62%;
 		width: 1.8vw;
 		height: 1.8vw;
 		border-left: 0.08vw solid #e94a45;
 		border-bottom: 0.08vw solid #e94a45;
 		transform: rotate(-45deg);
-		animation: oulipoSwipe 1.5s infinite;
+		animation: formesElementairesSwipe 1.5s infinite;
 		opacity: 50%;
 		box-sizing: border-box;
 	}
@@ -609,16 +608,16 @@ a:hover {
 	}
 
 	#formesElementairesSwipe a span:nth-of-type(2) {
-		bottom: -15vh;
+		bottom: -4vh;
 		animation-delay: .15s;
 	}
 
 	#formesElementairesSwipe a span:nth-of-type(3) {
-		bottom: -14vh;
+		bottom: -3vh;
 		animation-delay: .3s;
 	}
 
-	@keyframes oulipoSwipe {
+	@keyframes formesElementairesSwipe {
 		0% {
 			opacity: 0;
 		}
@@ -636,16 +635,15 @@ a:hover {
 
 
 	.flex-container {
-	  float:center;
 	  display:flex;
 	  flex-flow: row;
 	  justify-content:space-around;
 	  align-items: center;
-	  height: 70vmin;
+	  height: 50vmin;
 	  width: 80%;
-	  margin-top: 10vh;
 	  margin-right:auto;
 	  margin-left: auto;
+		margin-top: 20vh;
 	 	opacity: 100%;
 		flex-wrap: wrap;
 	}
@@ -673,7 +671,6 @@ a:hover {
 	  -webkit-transform: translate(-50%, -50%);
 	  -ms-transform: translate(-50%, -50%);
 	  transform: translate(-50%, -50%);
-	  text-align: center justify;
 	  cursor: pointer;
 	}
 
@@ -686,4 +683,128 @@ a:hover {
 	}
 	#containerformesElementaires:hover .overlay {
 	  opacity: 70%;
+	}
+
+	/* -------------------------------- carré blanc ----------------------------------------*/
+
+	#carreBlanc {
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: contain;
+		overflow: hidden;
+		height: 100vmin;
+	}
+
+	.container3 {
+		width: 100%;
+		margin-left: 0vw;
+	}
+
+	#myCarousel3 {
+		height: 100vmin;
+		position: static;
+		height: 100vmin;
+		margin-top: 0vh;
+		z-index: 0;
+	}
+	/* ---------------Carré blanc-----------------*/
+
+	#videoCarreBlanc img {
+		height: 100vmin;
+		width: 100vmin;
+		z-index: -10;
+		float: right;
+		margin-top: -100.5vh;
+		position: sticky;
+	}
+
+
+	/* --------------- page 1 ---------------------*/
+
+	#texteCarreBlanc h2 {
+		font-size: 14vw;
+		margin-top: -7vh;
+		font-weight: 600;
+		text-shadow: white 2px 2px, white -2px 2px, white -2px -2px, white 2px -2px;
+		color: #000c1c;
+		cursor: default;
+		line-height: 14vw;
+		text-align: center;
+	}
+
+	#texteCarreBlanc {
+		z-index: 2;
+		color: #e94a45;
+	}
+
+	#trois {
+		margin-top: 40vh;
+		margin-left: 14.8vw;
+		font-size: 1.3vw;
+		font-weight: 300;
+		cursor: default;
+	}
+
+	#descriptionTrois {
+		margin-left: 14.8vw;
+		font-size: 1.3vw;
+		font-weight: 300;
+		margin-top: 0vw;
+		cursor: default;
+	}
+
+	#texteCarreBlanc h4 {
+		margin-left: 14.8vw;
+		font-weight: 100;
+		margin-top: 0.5vw;
+		cursor: default;
+	}
+
+	#videoCarreBlanc h3 {
+		font-size: 14vw;
+		z-index: 5;
+		float: right;
+		margin-top: -58vh;
+		margin-right: 22vw;
+		font-weight: 600;
+		color:#e94a45;
+		line-height: 14vw;
+	}
+
+	#videoCarreBlanc h3 :hover {
+		color: #000c1c;
+	}
+
+
+	/* --------------- scroll down  ---------------------*/
+
+	#carreBlancSwipe a span {
+		position: absolute;
+		bottom: -19vh;
+		right: 62%;
+		width: 1.8vw;
+		height: 1.8vw;
+		border-left: 0.08vw solid #e94a45;
+		border-bottom: 0.08vw solid #e94a45;
+		transform: rotate(-225deg);
+		animation: carreBlancSwipe 1.5s infinite;
+		opacity: 50%;
+		box-sizing: border-box;
+	}
+
+	#carreBlancSwipe a span:nth-of-type(1) {
+		animation-delay: 0s;
+	}
+
+
+	@keyframes carreBlancSwipe {
+		0% {
+			opacity: 0;
+		}
+		50% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
 	}

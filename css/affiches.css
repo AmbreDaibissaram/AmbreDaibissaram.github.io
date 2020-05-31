@@ -527,7 +527,7 @@ a:hover {
 	animation-delay: .3s;
 }
 
-@keyframes oulipoSwipe {
+@keyframes lettersAreSwipe {
 	0% {
 		opacity: 0;
 	}
@@ -730,6 +730,40 @@ a:hover {
 
 #descriptionTrois b{
 	font-weight: 100;
+}
+
+/* --------------- scroll down  ---------------------*/
+
+#chindoguSwipe a span {
+	position: absolute;
+	bottom: -16vh;
+	right: 62%;
+	width: 1.8vw;
+	height: 1.8vw;
+	border-left: 0.08vw solid #e94a45;
+	border-bottom: 0.08vw solid #e94a45;
+	transform: rotate(-225deg);
+	animation: oulipoSwipe 1.5s infinite;
+	opacity: 50%;
+	box-sizing: border-box;
+}
+
+#chindoguSwipe a span:nth-of-type(1) {
+	animation-delay: 0s;
+}
+
+
+
+@keyframes chindoguSwipe {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 
 

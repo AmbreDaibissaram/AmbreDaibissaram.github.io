@@ -723,6 +723,15 @@ a:hover {
 	color: #e94a45;
 }
 
+#copyright{
+	text-align: right;
+	font-size: 1vw;
+	opacity: 30%;
+	margin-top: 6vh;
+	margin-right: 19vw;
+	color: #e94a45;
+}
+
 
 /* scroll to top */
 

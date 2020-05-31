@@ -6,27 +6,27 @@
       <title> Ambre Daibissaram </title>
       <link href="../css/reset.css" rel="stylesheet" type="text/css" >
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      
-      <!-------------------- carousel ---------------------->
+
+      <!-- carousel ---------------------->
       <link rel="stylesheet" href="../css/carousel.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       <link href="../css/affiches.css" rel="stylesheet" type="text/css" >
    </head>
-   
+
    <body>
-      
-      <!------------------------------- OULIPO------------------------------------>
-      
+
+      <!--- OULIPO------------------------------------>
+
       <section id="oulipo">
          <div class="container1">
-            
-            <!-------------------- carousel ---------------------->
-            
+
+            <!-- carousel ---------------------->
+
             <div id="myCarousel1" class="carousel slide" data-interval="false">
-               
-               <!-------------------- menu burger ---------------------->
-              
+
+               <!-- menu burger ---------------------->
+
                <nav id="menu">
                   <div class="bar1"></div>
                   <div class="bar2"></div>
@@ -43,13 +43,13 @@
                   var mainMenu = document.querySelector("#itemMenu");
                   var burgerMenu = document.querySelector("#menu");
                   var clickedEvent = "click";
-                  
+
                   // Crée un "toggle class" en Javascrit natif (compatible partout)
                   burgerMenu.addEventListener(clickedEvent, function(evt) {
                   	console.log(clickedEvent);
                   	// Modification du menu burger
                   	this.classList.toggle("change");
-                  
+
                   	// Crée l'effet pour le menu slide (compatible partout)
                   	if(mainMenu.getAttribute("class") != "visible") {
                   		mainMenu.setAttribute("class", "visible");
@@ -57,7 +57,7 @@
                   		mainMenu.setAttribute("class", "invisible");
                   	}
                   }, false);
-                  
+
                   // Menu se "range" après un clic n'importe où
                   mainMenu.addEventListener(clickedEvent, function(evt) {
                   	console.log(clickedEvent);
@@ -65,19 +65,19 @@
                   	burgerMenu.classList.toggle("change");
                   	mainMenu.setAttribute("class", "invisible");
                   }, false);
-                  
+
                </script>
-               <!-------------------- menu burger fin---------------------->
-              
+               <!-- menu burger fin---------------------->
+
                <!-- Wrapper for slides -->
                <div class="carousel-inner">
-                 
-                  <!-------------------- page 1 ---------------------->
-                 
+
+                  <!-- page 1 ---------------------->
+
                   <div class="item active oulipo1">
                      <h1><a href="../index.html">Ambre Daibissaram</a></h1>
-                    
-                     <!-------------------- oulipo texte ---------------------->
+
+                     <!-- - -  oulipo texte ---------------------->
                      <div id="filtre"></div>
                      <div id="afficheOulipo">
                         <img src="../images/affiches/Oulipo.jpg" alt ="Affiche oulipo " width="60">
@@ -94,17 +94,17 @@
                         </div>
                      </div>
                   </div>
-                 
-                  <!-------------------- page 2 ---------------------->
-                  
+
+                  <!--- page 2 ---------------------->
+
                   <div class="item oulipo2">
                      <h1><a href="../index.html">Ambre Daibissaram</a></h1>
                      <iframe  id="videoOulipo" src="https://player.vimeo.com/video/421808546?autoplay=1&loop=1&autopause=1&autopause=0" width="1920" height="1080" allow="autoplay"></iframe>
                   </div>
                </div>
-              
+
                <!-- Left and right controls -->
-               
+
                <a class="left-carousel-control" href="#myCarousel1" data-slide="prev">
                <img src="../images/affiches/left.png" id="leftArrows" alt="flèche gauche"></a>
                <a class="right-carousel-control" href="#myCarousel1" data-slide="next">
@@ -112,22 +112,22 @@
             </div>
          </div>
       </section>
-     
-      <!------------------------------- LETTERS ARE ---------------------------------->
-      
+
+      <!--- LETTERS ARE ---------------------------------->
+
       <section id="lettersAre">
          <div class="container2">
-            
-            <!-------------------- carousel ---------------------->
-           
+
+            <!--- carousel ---------------------->
+
             <div id="myCarousel2" class="carousel slide" data-interval="false">
-               
+
                <!-- Wrapper for slides -->
-              
+
               <div class="carousel-inner">
-                  
-                  <!-------------------- page 1 ---------------------->
-                  
+
+                  <!--- page 1 ---------------------->
+
                   <div class="item active lettersAre1">
                      <h1><a href="../index.html">Ambre Daibissaram</a></h1>
                      <div id="filtre"></div>
@@ -145,18 +145,18 @@
                         </div>
                      </div>
                   </div>
-                 
-                  <!-------------------- page 2 ---------------------->
-                  
+
+                  <!--- page 2 ---------------------->
+
                   <div class="item lettersAre2">
                      <h1><a href="../index.html">Ambre Daibissaram</a></h1>
-                     
+
                      <img src="../images/affiches/page2lettersare.jpg" alt= "Affiche letters are 1" id="lettersare1" width="1800">
 
                   </div>
 
-                   <!-------------------- page 3 ---------------------->
-                  
+                   <!--- page 3 ---------------------->
+
                   <div class="item lettersAre3">
                      <h1><a href="../index.html">Ambre Daibissaram</a></h1>
 
@@ -165,7 +165,7 @@
                      <video width="400" controls loop autoPlay>
   					<source src="../images/affiches/Composition1.mp4" type="video/mp4">
   					</video>
-                     
+
                      <img src="../images/affiches/page3lettersare.jpg" alt= "Affiche letters are 1" id="lettersare2" width="1800">
 
                   </div>
@@ -173,9 +173,9 @@
                </div>
 
             </div>
-           
+
             <!-- Left and right controls -->
-           
+
             <a class="left-carousel-control" href="#myCarousel2" data-slide="prev">
             <img src="../images/affiches/left.png" id="leftArrows2" alt="flèche gauche"></a>
             <a class="right-carousel-control" href="#myCarousel2" data-slide="next">
@@ -183,26 +183,26 @@
       </div>
       </section>
 
-     <!------------------------------- CHINDOGU------------------------------------>
-      
+     <!--- CHINDOGU------------------------------------>
+
       <section id="chindogu">
          <div class="container3">
-            
-            <!-------------------- carousel ---------------------->
-            
+
+            <!--- carousel ---------------------->
+
             <div id="myCarousel3" class="carousel slide" data-interval="false">
-               
-              
-              
+
+
+
                <!-- Wrapper for slides -->
                <div class="carousel-inner">
-                 
-                  <!-------------------- page 1 ---------------------->
-                 
+
+                  <!--- page 1 ---------------------->
+
                   <div class="item active chindogu">
                      <h1><a href="../index.html">Ambre Daibissaram</a></h1>
-                    
-                     <!-------------------- chindogu texte ---------------------->
+
+                     <!--- chindogu texte ---------------------->
                      <div id="filtre"></div>
                      <div id="afficheChindogu">
                         <img src="../images/affiches/Chindogufirst.jpg" alt ="Affiche chindogu" width="60">
@@ -214,20 +214,23 @@
                         <p id="descriptionTrois">Conception d’une affiche, sous forme de mode d’emploi, pour des Schiatsu shoes. Initiation au chindogu <b>(objet drole et absurde japonais).</b></p>
                         <br>
                         <h4> 2020</h4>
+                        <div id="chindoguSwipe" class="demo">
+                           <a href="#"><span></span></a>
+                        </div>
                      </div>
                   </div>
 
-                   <!-------------------- page 2 ---------------------->
-                  
+                   <!--- page 2 ---------------------->
+
                   <div class="item chindogu2">
                      <h1><a href="../index.html">Ambre Daibissaram</a></h1>
-                     
+
                      <img src="../images/affiches/Chindogu.jpg" alt= "Affiche Chindogu 2" id="chindogu2" width="1800">
 
                   </div>
 
-                   <!-------------------- page 3 ---------------------->
-                  
+                   <!--- page 3 ---------------------->
+
                   <div class="item chindogu3">
                      <h1><a href="../index.html">Ambre Daibissaram</a></h1>
 
@@ -235,12 +238,12 @@
 
                   </div>
 
-                 
+
 
                </div>
-              
+
                <!-- Left and right controls -->
-               
+
                <a class="left-carousel-control" href="#myCarousel3" data-slide="prev">
                <img src="../images/affiches/left.png" id="leftArrows3" alt="flèche gauche"></a>
                <a class="right-carousel-control" href="#myCarousel3" data-slide="next">
@@ -248,7 +251,7 @@
             </div>
          </div>
       </section>
-     
+
 
    </body>
 </html>

@@ -1,289 +1,353 @@
 <!DOCTYPE html>
 <html lang="fr">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title> Ambre Daibissaram </title>
-      <link href="../css/reset.css" rel="stylesheet" type="text/css" >
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Ambre Daibissaram </title>
+  <link href="../css/reset.css" rel="stylesheet" type="text/css" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- carousel ---------------------->
+  <link rel="stylesheet" href="../css/carousel.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="../css/motiondesign.css" rel="stylesheet" type="text/css" >
+</head>
+
+<body>
+
+  <!-- festival des murs à pêches ------------------------>
+
+  <section id="festivalDesMursAPeches">
+    <div class="container1">
 
       <!-- carousel ---------------------->
-      <link rel="stylesheet" href="../css/carousel.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      <link href="../css/motiondesign.css" rel="stylesheet" type="text/css" >
-   </head>
 
-   <body>
+      <div id="myCarousel1" class="carousel slide" data-interval="false">
 
-       <!-- festival des murs à pêches ------------------------>
+        <!-- menu burger ---------------------->
 
-        <section id="festivalDesMursAPeches">
-         <div class="container1">
+        <nav id="menu">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </nav>
+        <div id="itemMenu">
+          <ul>
+            <li><a href="../index.html">ACCUEIL<br></a></li>
+            <li><a href="../index.html#projets">PROJETS<br></a></li>
+            <li><a href="../index.html#contact">CONTACT</a></li>
+          </ul>
+        </div>
+        <script>
+        var mainMenu = document.querySelector("#itemMenu");
+        var burgerMenu = document.querySelector("#menu");
+        var clickedEvent = "click";
 
-            <!-- carousel ---------------------->
+        // Crée un "toggle class" en Javascrit natif (compatible partout)
+        burgerMenu.addEventListener(clickedEvent, function(evt) {
+          console.log(clickedEvent);
+          // Modification du menu burger
+          this.classList.toggle("change");
 
-            <div id="myCarousel1" class="carousel slide" data-interval="false">
+          // Crée l'effet pour le menu slide (compatible partout)
+          if(mainMenu.getAttribute("class") != "visible") {
+            mainMenu.setAttribute("class", "visible");
+          } else {
+            mainMenu.setAttribute("class", "invisible");
+          }
+        }, false);
 
-               <!-- menu burger ---------------------->
+        // Menu se "range" après un clic n'importe où
+        mainMenu.addEventListener(clickedEvent, function(evt) {
+          console.log(clickedEvent);
+          // Modification du menu burger
+          burgerMenu.classList.toggle("change");
+          mainMenu.setAttribute("class", "invisible");
+        }, false);
 
-               <nav id="menu">
-                  <div class="bar1"></div>
-                  <div class="bar2"></div>
-                  <div class="bar3"></div>
-               </nav>
-               <div id="itemMenu">
-                  <ul>
-                     <li><a href="../index.html">ACCUEIL<br></a></li>
-                     <li><a href="../index.html#projets">PROJETS<br></a></li>
-                     <li><a href="../index.html#contact">CONTACT</a></li>
-                  </ul>
-               </div>
-               <script>
-                  var mainMenu = document.querySelector("#itemMenu");
-                  var burgerMenu = document.querySelector("#menu");
+        </script>
+        <!-- menu burger fin---------------------->
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+          <!-- page 1 ---------------------->
+
+          <div class="item active festivalDesMursAPeches1">
+            <h1><a href="../index.html">Ambre Daibissaram</a></h1>
+
+            <!--festivalDesMursAPeches1 ---------------------->
+            <div id="filtre"></div>
+            <div id="video">
+              <img id="croix" src="../images/motiondesign/add_circle-white_create_expand_new_plus_icon_123218.png" alt="image de croix">
+              <iframe title="vimeo-player" src="https://player.vimeo.com/video/422973725" width="100%" height="100%" allowfullscreen>
+              </iframe>
+            </div>
+            <script>
+            var filtre = document.querySelector("#filtre");
+            var video = document.querySelector("#video");
+            var croix = document.querySelector("#croix");
+            var menu = document.querySelector("#menu");
+            var clickedEvent = "click";
+
+            // Crée un "toggle class" en Javascrit natif (compatible partout)
+            filtre.addEventListener(clickedEvent, function(evt) {
+              console.log(clickedEvent);
+              // Crée l'effet pour le menu slide (compatible partout)
+              video.setAttribute("class", "visible");
+              menu.style.display("none");
+            }, false);
+
+            // Menu se "range" après un clic n'importe où
+            croix.addEventListener(clickedEvent, function(evt) {
+              console.log(clickedEvent);
+              video.setAttribute("class", "invisible");
+              menu.style.display("inline-block");
+            }, false);
+            </script>
+
+            <div id="videoFestivalDesMursAPeches">
+              <img src="../images/motiondesign/festival.jpg" alt ="Image du festival des murs à pêches" width="60">
+              <h3>ival<b><br>à pêches</b></h3>
+            </div>
+            <div id="texteFestivalDesMursAPeches">
+              <p id="un">MOTION DESIGN</p>
+              <h2>fest<br><b>des murs</b></h2>
+              <p id="description">Teaser de 30s pour la 20e édition du festival.</p>
+              <br>
+              <h4> 2020</h4>
+              <div id="festivalDesMursAPechesSwipe" class="demo">
+                <a href="#formesElementaires"><span></span><span></span><span></span></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- page 2 ---------------------->
+
+          <div class="item festivalDesMursAPeches2">
+            <h1><a href="../index.html">Ambre Daibissaram</a></h1>
+            <div id="imageFestivalDesMursAPeches">
+              <img src="../images/motiondesign/posters.jpg" alt ="Image du festival des murs à pêches" width="100%">
+            </div>
+          </div>
+
+          <!-- page 3 ---------------------->
+
+          <div class="item festivalDesMursAPeches3">
+            <h1><a href="../index.html">Ambre Daibissaram</a></h1>
+            <iframe id="videofestivalDesMursAPeches" src="https://player.vimeo.com/video/424377726?autoplay=1&loop=1&title=0&byline=0&portrait=0" allow="autoplay ;loop" width="1920" height="1080"></iframe>
+          </div>
+
+        </div>
+
+        <!-- Left and right controls -->
+
+        <a class="left-carousel-control" href="#myCarousel1" data-slide="prev">
+          <img src="../images/affiches/left.png" id="leftArrows" alt="flèche gauche"></a>
+          <a class="right-carousel-control" href="#myCarousel1" data-slide="next">
+            <img src="../images/affiches/right.png" id="rightArrows" alt="flèche droite"></a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- formesElementaires --------------------------------------------------------->
+
+      <section id="formesElementaires">
+        <div class="container2">
+
+          <!-- carousel ---------------------->
+
+          <div id="myCarousel2" class="carousel slide" data-interval="false">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+              <!-- page 1 ---------------------->
+
+              <div class="item active formesElementaires1">
+                <h1><a href="../index.html">Ambre Daibissaram</a></h1>
+
+                <!--festivalDesMursAPeches1 ---------------------->
+                <div id="filtre2"></div>
+                <div id="video2">
+                  <img id="croix2" src="../images/motiondesign/add_circle-white_create_expand_new_plus_icon_123218.png" alt="image de croix">
+                  <iframe title="vimeo-player" src="https://player.vimeo.com/video/424388720" width="100%" height="100%" allowfullscreen>
+                  </iframe>
+                </div>
+
+                <script>
+                  var filtre2 = document.querySelector("#filtre2");
+                  var video2 = document.querySelector("#video2");
+                  var croix2 = document.querySelector("#croix2");
+                  var menu = document.querySelector("#menu");
                   var clickedEvent = "click";
 
                   // Crée un "toggle class" en Javascrit natif (compatible partout)
-                  burgerMenu.addEventListener(clickedEvent, function(evt) {
-                     console.log(clickedEvent);
-                     // Modification du menu burger
-                     this.classList.toggle("change");
-
-                     // Crée l'effet pour le menu slide (compatible partout)
-                     if(mainMenu.getAttribute("class") != "visible") {
-                        mainMenu.setAttribute("class", "visible");
-                     } else {
-                        mainMenu.setAttribute("class", "invisible");
-                     }
+                  filtre2.addEventListener(clickedEvent, function(evt) {
+                    console.log(clickedEvent);
+                    // Crée l'effet pour le menu slide (compatible partout)
+                    video2.setAttribute("class", "visible");
+                    menu.style.display("none");
                   }, false);
 
                   // Menu se "range" après un clic n'importe où
-                  mainMenu.addEventListener(clickedEvent, function(evt) {
-                     console.log(clickedEvent);
-                     // Modification du menu burger
-                     burgerMenu.classList.toggle("change");
-                     mainMenu.setAttribute("class", "invisible");
+                  croix2.addEventListener(clickedEvent, function(evt) {
+                    console.log(clickedEvent);
+                    video2.setAttribute("class", "invisible");
+                    menu.style.display("inline-block");
                   }, false);
+                </script>
 
-               </script>
-               <!-- menu burger fin---------------------->
+                <div id="videoformesElementaires">
+                  <img src="../images/motiondesign/formeselementaires.jpg" alt ="Image de formes elementaires" width="60">
+                  <h3>s<b><br>entaires</b></h3>
+                </div>
+                <div id="texteformesElementaires">
+                  <p id="deux">MOTION DESIGN</p>
+                  <h2>forme<br><b>élem</b></h2>
+                  <p id="descriptionDeux">Conception d’une carte infinie sur commande de la Maison des Mathématiques.</p>
+                  <br>
+                  <h4> 2019</h4>
+                  <div id="formesElementairesSwipe" class="demo">
+                    <a href=#carreBlanc><span></span><span></span><span></span></a>
+                  </div>
+                </div>
+              </div>
 
-               <!-- Wrapper for slides -->
-               <div class="carousel-inner">
+              <!-- page 2 ---------------------->
 
-                  <!-- page 1 ---------------------->
+              <div class="item formesElementaires2">
+                <h1><a href="../index.html">Ambre Daibissaram</a></h1>
 
-                  <div class="item active festivalDesMursAPeches1">
-                     <h1><a href="../index.html">Ambre Daibissaram</a></h1>
+                <div class="flex-container">
 
-                     <!--festivalDesMursAPeches1 ---------------------->
-                     <div id="filtre"></div>
-                     <div id="video">
-                       <img id="croix" src="../images/motiondesign/add_circle-white_create_expand_new_plus_icon_123218.png" alt="image de croix">
-                       <iframe title="vimeo-player" src="https://player.vimeo.com/video/422973725" width="100%" height="100%" allowfullscreen>
-                       </iframe>
-                     </div>
-                     <script>
-                       var filtre = document.querySelector("#filtre");
-                       var video = document.querySelector("#video");
-                       var croix = document.querySelector("#croix");
-                       var menu = document.querySelector("#menu");
-                       var clickedEvent = "click";
-
-                       // Crée un "toggle class" en Javascrit natif (compatible partout)
-                       filtre.addEventListener(clickedEvent, function(evt) {
-                         console.log(clickedEvent);
-                          // Crée l'effet pour le menu slide (compatible partout)
-                          video.setAttribute("class", "visible");
-                          menu.style.display("none");
-                       }, false);
-
-                       // Menu se "range" après un clic n'importe où
-                       croix.addEventListener(clickedEvent, function(evt) {
-                          console.log(clickedEvent);
-                          video.setAttribute("class", "invisible");
-                          menu.style.display("inline-block");
-                       }, false);
-                     </script>
-                     <div id="videoFestivalDesMursAPeches">
-                       <img src="../images/motiondesign/festival.jpg" alt ="Image du festival des murs à pêches" width="60">
-                        <h3>ival<b><br>à pêches</b></h3>
-                     </div>
-                     <div id="texteFestivalDesMursAPeches">
-                        <p id="un">MOTION DESIGN</p>
-                        <h2>fest<br><b>des murs</b></h2>
-                        <p id="description">Teaser de 30s pour la 20e édition du festival.</p>
-                        <br>
-                        <h4> 2020</h4>
-                        <div id="festivalDesMursAPechesSwipe" class="demo">
-                           <a href="#formesElementaires"><span></span><span></span><span></span></a>
-                        </div>
-                     </div>
+                  <div id="containerformesElementaires">
+                    <img src="../images/motiondesign/IMG_7828.jpg" alt ="illustrations de formes elementaires" width="300" >
+                    <a href="https://www.behance.net/gallery/88818263/Formes-familieres" target="_blank" class="overlay">
+                      <div class="textformesElementaires">Étape 1</div>
+                    </a>
                   </div>
 
-                    <!-- page 2 ---------------------->
+                  <div id="containerformesElementaires">
+                    <img src="../images/motiondesign/IMG_7828ce.jpg" alt ="illustrations de formes elementaires" width="300" >
+                  </div>
 
-                    <div class="item festivalDesMursAPeches2">
-                       <h1><a href="../index.html">Ambre Daibissaram</a></h1>
-                       <div id="imageFestivalDesMursAPeches">
-                         <img src="../images/motiondesign/posters.jpg" alt ="Image du festival des murs à pêches" width="100%">
-                       </div>
-                    </div>
 
-                    <!-- page 3 ---------------------->
+                  <div id="containerformesElementaires">
+                    <img src="../images/motiondesign/IMG_7828z.jpg" alt ="illustrations de formes elementaires" width="300" >
+                    <a href="https://www.behance.net/gallery/88818263/Formes-familieres" target="_blank" class="overlay">
+                      <div class="textformesElementaires">Étape 2</div>
+                    </a>
+                  </div>
 
-                    <div class="item festivalDesMursAPeches3">
-                       <h1><a href="../index.html">Ambre Daibissaram</a></h1>
-                       <iframe id="videofestivalDesMursAPeches" src="https://player.vimeo.com/video/424377726?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="1920" height="1080"></iframe>
-                    </div>
+                  <div id="containerformesElementaires">
+                    <img src="../images/motiondesign/IMG_7828d.jpg" alt ="illustrations de formes elementaires" width="300" >
+                  </div>
+
+
+                  <div id="containerformesElementaires">
+                    <img src="../images/motiondesign/IMG_7828y.jpg" alt ="illustrations de formes elementaires" width="300" >
+                    <a href="https://www.behance.net/gallery/88818263/Formes-familieres" target="_blank" class="overlay">
+                      <div class="textformesElementaires">Étape 3</div>
+                    </a>
+                  </div>
+
+                  <div id="containerformesElementaires">
+                    <img src="../images/motiondesign/IMG_7828uu.jpg" alt ="illustrations de formes elementaires" width="300" >
+                  </div>
+
+
+                  <div id="containerformesElementaires">
+                    <img src="../images/motiondesign/IMG_7828i.jpg" alt ="illustrations de formes elementaires" width="300" >
+                    <a href="https://www.behance.net/gallery/88818263/Formes-familieres" target="_blank" class="overlay">
+                      <div class="textformesElementaires">Étape 4</div>
+                    </a>
+                  </div>
+
+                  <div id="containerformesElementaires">
+                    <img src="../images/motiondesign/IMG_7828k.jpg" alt ="illustrations de formes elementaires" width="300" >
+                  </div>
 
                 </div>
+              </div>
+            </div>
 
             <!-- Left and right controls -->
 
-            <a class="left-carousel-control" href="#myCarousel1" data-slide="prev">
-            <img src="../images/affiches/left.png" id="leftArrows" alt="flèche gauche"></a>
-            <a class="right-carousel-control" href="#myCarousel1" data-slide="next">
-            <img src="../images/affiches/right.png" id="rightArrows" alt="flèche droite"></a>
-         </div>
-
+            <a class="left-carousel-control" href="#myCarousel2" data-slide="prev">
+              <img position="relative" src="../images/affiches/left.png" id="leftArrows2" alt="flèche gauche"></a>
+              <a class="right-carousel-control" href="#myCarousel2" data-slide="next">
+                <img position="relative" src="../images/affiches/right.png" id="rightArrows2" alt="flèche droite"></a>
+        </div>
       </div>
-      </section>
+  </section>
 
-<!-- formesElementaires --------------------------------------------------------->
+          <!-- carré blanc --------------------------------------------------------->
 
-       <section id="formesElementaires">
-        <div class="container2">
+          <section id="carreBlanc">
+            <div class="container3">
 
-           <!-- carousel ---------------------->
+              <!-- carousel ---------------------->
 
-           <div id="myCarousel2" class="carousel slide" data-interval="false">
+              <div id="myCarousel3" class="carousel slide" data-interval="false">
 
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
 
-                 <!-- page 1 ---------------------->
+                  <!-- page 1 ---------------------->
 
-                 <div class="item active formesElementaires1">
+                  <div class="item active carreBlanc1">
                     <h1><a href="../index.html">Ambre Daibissaram</a></h1>
 
                     <!--festivalDesMursAPeches1 ---------------------->
-                    <div id="filtre"></div>
-                    <div id="video">
-                      <img id="croix" src="../images/motiondesign/add_circle-white_create_expand_new_plus_icon_123218.png" alt="image de croix">
-                      <iframe title="vimeo-player" src="https://player.vimeo.com/video/424388720?autoplay=1&loop=1&title=0&byline=0&portrait=0" allow="autoplay" width="100%" height="100%" allowfullscreen>
+                    <div id="filtre3"></div>
+                    <div id="video3">
+                      <img id="croix3" src="../images/motiondesign/add_circle-white_create_expand_new_plus_icon_123218white.png" alt="image de croix">
+                      <iframe title="vimeo-player" src="https://player.vimeo.com/video/424430701" width="100%" height="100%" allowfullscreen>
                       </iframe>
                     </div>
 
-                    <!-- <script>
-                      var filtre = document.querySelector("#filtre");
-                      var video = document.querySelector("#video");
-                      var croix = document.querySelector("#croix");
+                    <script>
+                      var filtre3 = document.querySelector("#filtre3");
+                      var video3 = document.querySelector("#video3");
+                      var croix3 = document.querySelector("#croix3");
                       var menu = document.querySelector("#menu");
                       var clickedEvent = "click";
 
                       // Crée un "toggle class" en Javascrit natif (compatible partout)
-                      filtre.addEventListener(clickedEvent, function(evt) {
+                      filtre3.addEventListener(clickedEvent, function(evt) {
                         console.log(clickedEvent);
-                         // Crée l'effet pour le menu slide (compatible partout)
-                         video.setAttribute("class", "visible");
-                         menu.style.display("none");
+                        // Crée l'effet pour le menu slide (compatible partout)
+                        video3.setAttribute("class", "visible");
+                        menu.style.display("none");
                       }, false);
 
                       // Menu se "range" après un clic n'importe où
-                      croix.addEventListener(clickedEvent, function(evt) {
-                         console.log(clickedEvent);
-                         video.setAttribute("class", "invisible");
-                         menu.style.display("inline-block");
+                      croix3.addEventListener(clickedEvent, function(evt) {
+                        console.log(clickedEvent);
+                        video3.setAttribute("class", "invisible");
+                        menu.style.display("inline-block");
                       }, false);
-                    </script> -->
+                    </script>
 
-                    <div id="videoformesElementaires">
-                      <img src="../images/motiondesign/formeselementaires.jpg" alt ="Image de formes elementaires" width="60">
-                       <h3>s<b><br>entaires</b></h3>
+                    <div id="videoCarreBlanc">
+                      <img src="../images/motiondesign/Capturedecran.jpg" alt ="Image de carré" width="60">
+                      <h3>blanc</h3>
                     </div>
-                    <div id="texteformesElementaires">
-                       <p id="deux">MOTION DESIGN</p>
-                       <h2>forme<br><b>élem</b></h2>
-                       <p id="descriptionDeux">Conception d’une carte infinie sur commande de la Maison des Mathématiques.</p>
-                       <br>
-                       <h4> 2019</h4>
-                       <div id="formesElementairesSwipe" class="demo">
-                          <a href="#carreBlanc"><span></span><span></span><span></span></a>
-                       </div>
+                    <div id="texteCarreBlanc">
+                      <p id="trois">MOTION DESIGN</p>
+                      <h2>carré</h2>
+                      <p id="descriptionTrois">Métamorphose d’un carré en 10 secondes.</p>
+                      <br>
+                      <h4> 2020</h4>
+                      <div id="carreBlancSwipe" class="demo">
+                        <a href="#"><span></span></a>
+                      </div>
                     </div>
-                 </div>
-
-                   <!-- page 2 ---------------------->
-
-                   <div class="item formesElementaires2">
-                      <h1><a href="../index.html">Ambre Daibissaram</a></h1>
-
-                      <div class="flex-container">
-
-                          <div id="containerformesElementaires1">
-                           <img src="../images/motiondesign/IMG_7828.jpg" alt ="illustrations de formes elementaires" width="300" >
-                              <a href="https://www.behance.net/gallery/88818263/Formes-familieres" target="_blank" class="overlay">
-                              <div class="textformesElementaires1">Étape 1</div>
-                              </a>
-                           </div>
-
-                          <div id="containerformesElementaires2">
-                           <img src="../images/motiondesign/IMG_7828ce.jpg" alt ="illustrations de formes elementaires" width="300" >
-                          </div>
+                  </div>
 
 
-                          <div id="containerformesElementaires3">
-                           <img src="../images/motiondesign/IMG_7828z.jpg" alt ="illustrations de formes elementaires" width="300" >
-                              <a href="https://www.behance.net/gallery/88818263/Formes-familieres" target="_blank" class="overlay">>
-                              <div class="textformesElementaires3">Étape 2</div>
-                              </a>
-                          </div>
-
-                          <div id="containerformesElementaires4">
-                           <img src="../images/motiondesign/IMG_7828d.jpg" alt ="illustrations de formes elementaires" width="300" >
-                          </div>
-
-
-                          <div id="containerformesElementaires5">
-                           <img src="../images/motiondesign/IMG_7828y.jpg" alt ="illustrations de formes elementaires" width="300" >
-                              <a href="https://www.behance.net/gallery/88818263/Formes-familieres" target="_blank" class="overlay">
-                              <div class="textformesElementaires3">Étape 3</div>
-                              </a>
-                          </div>
-
-                          <div id="containerformesElementaires6">
-                           <img src="../images/motiondesign/IMG_7828uu.jpg" alt ="illustrations de formes elementaires" width="300" >
-                          </div>
-
-
-                          <div id="containerformesElementaires7">
-                           <img src="../images/motiondesign/IMG_7828i.jpg" alt ="illustrations de formes elementaires" width="300" >
-                              <a href="https://www.behance.net/gallery/88818263/Formes-familieres" target="_blank" class="overlay">
-                              <div class="textformesElementaires3">Étape 4</div>
-                              </a>
-                          </div>
-
-                          <div id="containerformesElementaires8">
-                           <img src="../images/motiondesign/IMG_7828k.jpg" alt ="illustrations de formes elementaires" width="300" >
-                          </div>
-
-                     </div>
-                   </div>
-
-
-               </div>
-
-           <!-- Left and right controls -->
-
-           <a class="left-carousel-control" href="#myCarousel2" data-slide="prev">
-           <img src="../images/affiches/left.png" id="leftArrows2" alt="flèche gauche"></a>
-           <a class="right-carousel-control" href="#myCarousel2" data-slide="next">
-           <img src="../images/affiches/right.png" id="rightArrows2" alt="flèche droite"></a>
-        </div>
-
-     </div>
-     </section>
-
-   </body>
+    </body>
+</html>
